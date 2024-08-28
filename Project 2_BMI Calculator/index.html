@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: gray;
+
+        }
+        h1{
+            text-align: center;
+        }
+        form{
+            font-weight:bolder ;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        form button{
+             margin-block: 1rem;
+             padding: 5px 15px;
+             background-color: beige;
+             font-weight: bolder;
+             border-radius: 10px;
+             width: 8rem;
+        }
+        form input{
+            width: 10rem;
+            border-radius: 7px;
+            padding: 5px;
+        }
+        #info{
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>BMI Calculator</h1>
+    </div>
+
+    <div>
+        <form>
+            <p><label for="">Enter The Height</label> <input type="text" id="Height"></p>
+            <p><label for="">Enter The weight</label> <input type="text" id="Weight"></p>
+
+            <button type="submit">Calculate</button>
+
+            <p id="result"></p>
+            <p id="result-p"></p>
+
+            <div id="info">
+                <h3>Weight Infomation</h3>
+                <p id="under">Under weight : less than 18.5</p>
+                <p id="normal">Normal weight : 18.6 to 24.9</p>
+                <p id="over">overweight : greater than 24.9</p>
+            </div>
+        </form>
+    </div>
+
+
+    <script>
+        const form = document.querySelector('form');
+        const under = document.querySelector('#under');
+        const normal = document.querySelector('#normal');
+        const over = document.querySelector('#over');
+        const resultPara = document.querySelector('#result-p')
+        form.addEventListener('submit', (event) => {
+            event.preventDefault();
+            const height = parseInt(document.querySelector('#Height').value);
+            const weight = parseInt(document.querySelector('#Weight').value);
+            const result = document.querySelector('#result');
+
+            if (height === "" || height < 0 || isNaN(height)) {
+                result.innerHTML = `Invalid Height`
+            } else if (weight === "" || weight < 0 || isNaN(weight)) {
+                result.innerHTML = 'Invalid weight'
+            } else {
+                const bmi = (weight / ((height * height) / 10000)).toFixed(2);
+                result.textContent = bmi;
+                if (18.5 > bmi) {
+                    resultPara.textContent = under.textContent;
+                } else if (18.6 < bmi && bmi < 24.9) {
+                    resultPara.textContent = normal.textContent;
+                } else if (bmi > 24.9) {
+                    resultPara.textContent = over.textContent;
+                }
+            }
+
+
+        })
+
+
+
+    </script>
+</body>
+
+</html>
