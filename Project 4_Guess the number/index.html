@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the Number</title>
+    <style>
+        body{
+            background-color: rgb(83, 81, 81);
+        }
+        .para{
+            text-align: center;
+            color: aliceblue;
+        }
+        form{
+            margin-top: 3rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            color: aliceblue;
+        }
+        form #la{
+            font-size: xx-large;
+            font-weight: 800;
+            
+        }
+        form input[type = 'text']{
+            padding: 0.4rem 1rem;
+            text-align: center;
+        }
+        form input[type = 'submit']{
+            padding: 10px 25px;
+            background-color: #212121;
+            color: aliceblue;
+            border-radius: 10px;
+        }
+        .resultField{
+            text-align: center;
+            color: aliceblue;
+        }
+        .resultField #result{
+            font-size: 32px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+       <div class="para">
+        <p>Guess the number between 1 to 100</p>
+        <p>You have 10 attempts to guess the number</p>
+       </div>
+          <form action="">
+             <label for="guessField" id="la">Guess The number</label>
+             <input type="text" value="" id="guessField">
+             <input type="submit" value="Submit" id="subt">
+          </form>
+          <div class="resultField">
+            <p>Guessed Numbers : <span id="prevGuess"></span></p>
+            <p>Attempt Remainig : <span id="remain">10</span></p>
+            <div id="result"></div>
+          </div>
+    </div>
+<script src="app.js"></script>
+</body>
+</html>
