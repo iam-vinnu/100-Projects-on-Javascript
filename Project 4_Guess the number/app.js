@@ -1,5 +1,5 @@
 
-const random = parseInt(Math.random()*100 + 1);
+let random = parseInt(Math.random()*100 + 1);
 console.log(random);
 
 const userInput = document.querySelector('#guessField');
@@ -66,15 +66,20 @@ const displayMessage = (message)=>{
       result.textContent = message;
 }
 const resetGame=()=>{
-      
+
 }
 const endGame = ()=>{
        userInput.value = " "
        submit.setAttribute('disabled','');
        p.setAttribute('id','new');
+       p.style.cursor = 'pointer';
        p.textContent= "Click To Start Again"
        resulField.appendChild(p);
+       startGame(p);
 }
-const startGame = ()=>{
-      
+const startGame = (p)=>{
+      p.addEventListener('click',(e)=>{
+ //             prevGuess = [];
+              location.reload();
+      })
 }
