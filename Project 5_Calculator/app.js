@@ -15,5 +15,5 @@ btn.forEach((buttons)=>{
 })
 
  const caculateValues = ()=>{
-    
+    inputField.value = eval(inputField.value)
  }
