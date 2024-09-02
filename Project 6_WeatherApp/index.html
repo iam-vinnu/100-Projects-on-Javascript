@@ -1,27 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style></style>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgb(145, 209, 237);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            background-color: rgb(201, 208, 209);
+            width: 400px;
+            height: 350px;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .heading {
+            color: red;
+            margin: 10px;
+        }
+
+        form input {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            outline: none;
+        }
+
+        form button {
+            padding: 9px 15px;
+            border-radius: 5px;
+            border: none;
+            background-color: rgb(232, 107, 107);
+            color: white;
+            font-weight: 600;
+        }
+        .temp{
+            font-size: 2rem;
+            margin-block: 1.5rem;
+        }
+        .condition{
+            margin-bottom: 1rem;
+            font-size: 20px;
+        }
+        .details{
+            display: flex;
+            gap: 10px;
+            padding: 10px;
+            
+        }
+        .feel{
+            background-color: aliceblue;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .humidity{
+            background-color: aliceblue;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .windSpeed{
+            background-color: aliceblue;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
 </head>
+
 <body>
     <div class="container">
         <div class="heading">
             <h2>Weather App</h2>
         </div>
-             
+
         <form action="">
             <input type="text" id="inputCity" placeholder="Enter your city name">
             <button id="submit">Submit</button>
         </form>
+
         <div class="w-data">
             <div class="w-logo">
                 <img src="https:/openweathermap.org/img/wn/01d.png" alt="">
             </div>
             <div class="temp">35°C</div>
             <div class="condition">Haze</div>
+
             <div class="details">
                 <div class="feel">feels like : <span id="feels"></span></div>
                 <div class="humidity">Humidity : <span id="humid"></span></div>
@@ -29,8 +108,9 @@
             </div>
         </div>
     </div>
-    
 
-   <script src="app.js"></script> 
+
+    <script src="app.js"></script>
 </body>
+
 </html>

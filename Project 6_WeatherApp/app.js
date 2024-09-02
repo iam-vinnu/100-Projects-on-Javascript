@@ -5,7 +5,7 @@ const weatherLogo = document.querySelector('.w-logo')
 const inputField = document.querySelector('#inputCity')
 const submit = document.querySelector('#submit');
 const temp = document.querySelector('.temp');
-const consdition = document.querySelector('.condition');
+const condition = document.querySelector('.condition');
 const feltTemp = document.querySelector('#feels');
 const humidity = document.querySelector('#humid');
 const windspeed = document.querySelector('#speed');
@@ -26,9 +26,21 @@ const getWeatherData = async (cityValue) =>{
 
         }
         const data = await response.json();
-
+        console.log(data)
         const displayTemp = Math.round(data.main.temp)
+        const condi = data.weather[0].main
+        const feelsLike = Math.round(data.main.feels_like) 
+        const humid =data.main.humidity;
+        const windSpeed = data.wind.speed;
+        const icon = data.weather.icon;
+        console.log(condition)
+
+
         temp.textContent =`${displayTemp}°C`
+        feltTemp.textContent = `${feelsLike}°C`
+        humidity.textContent = humid
+        condition.textContent = condi
+        windspeed.textContent = `${windSpeed}K/h`
     } catch (error) {
     }
      
