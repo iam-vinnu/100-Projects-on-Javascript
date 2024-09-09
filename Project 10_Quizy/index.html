@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            list-style: none;
+         }
+         body{
+            background-color: antiquewhite;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+         }
+         .afterText{
+            font-size: 6rem;
+            text-align: center;
+            color: red;
+         }
+         .container{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            background-color: aliceblue;
+            border-radius: 10px;
+            box-shadow: 0 0 10px black;
+            max-width: 350px;
+            overflow-wrap: break-word;
+            position: relative;
+        }
+        h2{
+            font-size: 1.6rem;
+            text-align: center;
+            padding: 20px;
+         }
+         ul{
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+         }
+         li{
+            font-size: 1.2rem;
+            padding: 10px;
+         }
+         input, label{
+            cursor: pointer;
+         }
+         button{
+            padding: 6px;
+            background-color: rgb(60, 172, 60);
+            color: white;
+            font-size: 1rem;
+            border: none;
+            cursor: pointer;
+            border-radius: 0 0 10px 10px;
+         }
+         button:hover{
+            background-color: rgb(49, 140, 49);
+         }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2 id="question">
+            questidsgjpwmvfwjpfwmppppppppp
+        </h2>
+        <ul>
+            <li><input type="radio" name="quiz-option" class="answer" id="option-a">
+                <label for="option-a" id="text_option_a">Option A</label>
+            </li>
+            <li><input type="radio" name="quiz-option" class="answer" id="option-b">
+                <label for="option-b" id="text_option_b">Option A</label>
+            </li>
+            <li><input type="radio" name="quiz-option" class="answer" id="option-c">
+                <label for="option-c" id="text_option_c">Option A</label>
+            </li>
+            <li><input type="radio" name="quiz-option" class="answer" id="option-d">
+                <label for="option-d" id="text_option_d">Option A</label>
+            </li>
+        </ul>
+        <button type="submit">Submit</button>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>

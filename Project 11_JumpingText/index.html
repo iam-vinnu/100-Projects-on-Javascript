@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jumping Text</title>
+   <style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+        background-color: skyblue;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    span{
+        font-size: 5rem;
+        color: blue;
+        cursor: pointer;
+    }
+   .active{
+        animation: jump 2s ease-in-out ;
+    }
+    @keyframes jump {
+        0%{
+            transform: translate(0,0) rotate(180deg);
+        }
+        100%{
+            transform: scale(2.5) translate(0, -110px);
+        }
+    }
+   </style>
+</head>
+<body>
+        <span>B</span>
+        <span>I</span>
+        <span>N</span>
+        <span>A</span>
+        <span>Y</span>
+    <script src="app.js"></script>
+</body>
+</html>
