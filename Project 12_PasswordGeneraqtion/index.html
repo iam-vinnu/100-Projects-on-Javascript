@@ -4,19 +4,98 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Password Generator</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+       body{
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #4158D0;
+        background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+
+       }
+       .container{
+         background-color: antiquewhite;
+         box-shadow: 0 0 10px ;
+         border-radius: 10px;
+       }
+       .header{
+        padding: 15px;
+        background-color: #4158D0;
+        color: white;
+        border-radius: 10px 10px 0 0;
+       }
+       .setting{
+         display: flex;
+         justify-content: space-between;
+         padding-inline: 15px;
+         margin-block: 10px;
+       }
+       #generate{
+        width: 100%;
+        padding: 10px;
+        background-color: #4158D0;
+        color: white;
+        font-size: 17px;
+        border: none;
+        border-radius: 0 0 10px 10px;
+       }
+       #copy{
+          background-color: #4158D0;
+          border: none;
+          padding: 7px;
+          border-radius: 5px;
+          color: white;
+       }
+      span{
+        font-size: 17px;
+        font-weight: bold;
+      }
+      button:hover{
+        cursor: pointer;
+      }
+    </style>
 </head>
 <body>
 
     <div class="container">
-       <h2>
-        Password Genrator
-       </h2>
-
-       <div class="password">
-
-       </div>
+      <div class="header">
+        <h2>Password Generator</h2>
+      </div>
+      <div class="setting">
+        <span id="password"></span>
+        <button id="copy">copy</button>
+      </div>
+      <div class="setting">
+        <span id="lenght">lenght</span>
+        <input type="number" name="" id="inputLength" value="10" max="20" min="5" step="1">
+      </div>
+      <div class="setting">
+        <span id="upper">Uppercase</span>
+        <input type="checkbox" name="" id="upperCheckbox" checked>
+      </div>
+      <div class="setting">
+        <span id="lower">Lowercase</span>
+        <input type="checkbox" name="" id="lowerCheckbox" checked>
+      </div>
+      <div class="setting">
+        <span id="num">Number</span>
+        <input type="checkbox" name="" id="numberCheckbox" checked>
+      </div>
+      <div class="setting">
+        <span id="symbol">Symbol</span>
+        <input type="checkbox" name="" id="symbolCheckbox" checked>
+      </div>
+      <button id="generate">Generate</button>
        
     </div>
-    
+
+
+    <script src="app.js"></script>
 </body>
 </html>
