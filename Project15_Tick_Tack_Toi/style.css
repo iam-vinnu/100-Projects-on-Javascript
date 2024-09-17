@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+    background-color: #1a1818;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:20px;
+}
+.animate{
+    color: aliceblue;
+    text-shadow:
+      0 0 7px #fff,
+      0 0 10px #fff,
+      0 0 21px #fff,
+      0 0 42px #0fa,
+      0 0 82px #0fa,
+      0 0 92px #0fa,
+      0 0 102px #0fa,
+      0 0 151px #0fa;
+      font-size: 30px;
+      animation: flicker 1.5s infinite alternate;  
+}
+@keyframes flicker {
+    
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+  
+        text-shadow:
+        0 0 4px #fff,
+        0 0 11px #fff,
+        0 0 19px #fff,
+        0 0 40px #0fa,
+        0 0 80px #0fa,
+        0 0 90px #0fa,
+        0 0 100px #0fa,
+        0 0 150px #0fa;
+    
+    }
+    
+    20%, 24%, 55% {        
+        text-shadow: none;
+    }    
+  }
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(30, 38, 44);
+    width: 80vw;
+    height: 80vh;
+    max-width: 450px;
+    padding:20px ;
+    border-radius: 10px;
+    box-shadow: 0 0 10px;
+}
+.gamescreen{
+    height: 55%;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 33% 33% 33%;
+    grid-template-columns: 33% 33% 33%;
+    gap: 5px;
+}
+
+.btns{
+    background-color: transparent;
+   border: none;
+   box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.8),
+   -2px -5px 10px rgba(0, 0, 0, 0.8);
+   border-radius: 5px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   color: aliceblue;
+   font-size: 45px;
+   /* text-shadow: rgba(230,0,255,0.9) 0px 0px 39px; */
+}
+.btns:hover{
+    box-shadow: inset 2px 5px 10px rgba(0, 0, 0, 0.8);
+}
+.turn{
+    height:20%;
+}
+.result{
+    height: 25%;
+    display: flex;
+    align-items: center;
+    color: antiquewhite;
+    font-size: 20px;
+}
